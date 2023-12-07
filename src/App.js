@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+const EventExample = () => {
+  // State to track changes
+  const [buttonText, setButtonText] = useState('Click me');}
+
+  // Event handler function
+  const handleClick = () => {
+    setButtonText('Button clicked!');
+    console.log('Button clicked!');
+  };
+
+  // JSX with event handler
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button onClick={handleClick}>{buttonText}</button>
     </div>
   );
-}
+;
+
 
 export default App;
